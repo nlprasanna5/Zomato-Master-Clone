@@ -6,6 +6,8 @@ const ReviewSchema = mongoose.Schema({
     user: {type: mongoose.Types.ObjectId, ref: "Users"},
     rating: {type: Number, required: true},
     reviewText: {type: String, required: true},
+    isRestaurantReview: Boolean,
+    isFoodReview: Boolean,
     photos: [{
         type: mongoose.Types.ObjectId,
         ref: "Images"
@@ -16,4 +18,4 @@ const ReviewSchema = mongoose.Schema({
 }
 );
 
-export const ReviewModel = mongoose.Model("Reviews",ReviewSchema);
+export const ReviewModel = mongoose.model("Reviews",ReviewSchema);
