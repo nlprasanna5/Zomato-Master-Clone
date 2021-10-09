@@ -12,6 +12,7 @@ const HomeLayout = (props) => {
      {props.children}
      </div>
      <FoodTab />
+     <h3>Hello</h3>
     </>
 };
 
